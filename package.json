@@ -1,0 +1,27 @@
+{
+  "name": "bugger-devtools",
+  "version": "0.0.0",
+  "description": "Node app running the chrome devtools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/buggerjs/bugger-devtools.git"
+  },
+  "author": "Jan Krems <jan.krems@gmail.com>",
+  "license": "See LICENSE",
+  "bugs": {
+    "url": "https://github.com/buggerjs/bugger-devtools/issues"
+  },
+  "homepage": "https://github.com/buggerjs/bugger-devtools",
+  "dependencies": {
+    "commander": "^2.3.0",
+    "send": "^0.9.2"
+  },
+  "bin": {
+    "bugger-devtools": "bugger-devtools.js"
+  },
+  "devDependencies": {}
+}
