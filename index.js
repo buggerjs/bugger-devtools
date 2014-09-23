@@ -9,7 +9,15 @@ module.exports = function buggerDevtools() {
   var rootPath = path.join(__dirname, 'devtools');
 
   function onRequest(req, res) {
-    send(req, req.url, {
+    var pathname = req.url.split('?')[0];
+    if (pathname.indexOf('/devtools/') !== 0) {
+      res.writeHead(302, {
+        'Location': '/devtools/devtools.html'
+      });
+      res.end();
+    }
+    pathname = pathname.replace(/^\/devtools/, '');
+    send(req, pathname, {
       root: rootPath,
       index: []
     }).pipe(res);
